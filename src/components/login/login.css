@@ -1,0 +1,136 @@
+/* General styles for desktop view */
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/Flare.png") no-repeat center center;
+  background-position: center calc(50% - 30vh); 
+}
+
+.login .logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: 50px; /* Adjust this value to move the item below the logo */
+}
+
+.login .item form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login .item form input {
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(17, 25, 40, 0.6);
+  color: white;
+  border-radius: 5px;
+}
+
+.login .item form button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: #1f8ef1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login .item form button:disabled {
+  cursor: not-allowed;
+  background-color: #1f8ff19c;
+}
+
+.custom-link {
+  color: rgb(83, 83, 241);
+  text-decoration: none;
+}
+
+.custom-link:visited {
+  color: lightblue;
+}
+
+.custom-link:hover {
+  color: red;
+}
+
+.custom-link:active {
+  color: lightblue;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    background-size: cover;
+  }
+
+  .login .item {
+    gap: 15px;
+    width: 100%;
+    top: 0;
+  }
+
+  .login .item form {
+    gap: 15px;
+  }
+
+  .login .item form input {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .login .item form button {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+/* Further adjustments for smaller screens (like phones) */
+@media (max-width: 480px) {
+  .login {
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .login .item {
+    gap: 10px;
+  }
+
+  .login .item form input {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .login .item form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
