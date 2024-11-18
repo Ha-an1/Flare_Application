@@ -15,6 +15,10 @@
   color: white;
 }
 
+.detail .user {
+  text-align: center;
+}
+
 .detail .user img {
   width: 100px;
   height: 100px;
